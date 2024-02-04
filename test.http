@@ -1,0 +1,101 @@
+# Create User
+POST http://localhost:3000/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "FAISAL",
+  "password" : "rahasia",
+  "name" : "FAISAL ZUL"
+}
+
+###
+
+# Login User
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "FAISAL",
+  "password" : "rahasia"
+}
+
+###
+
+# Get Current User
+GET http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: f8801d3a-6980-4020-aad3-a0880a9aed56
+
+###
+
+# Update Current User
+PATCH http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: f8801d3a-6980-4020-aad3-a0880a9aed56
+
+{
+  "name" : "FAISAL NCEK"
+}
+
+###
+
+# Logout User
+DELETE http://localhost:3000/api/users/logout
+Content-Type: application/json
+Accept: application/json
+Authorization: f8801d3a-6980-4020-aad3-a0880a9aed56
+
+###
+
+# Create Product
+POST http://localhost:3000/api/products
+Content-Type: application/json
+Accept: application/json
+Authorization: dcb1c885-fba3-41ca-9309-5c1b7b524c59
+
+{
+  "namaProduct" : "VGA RTX 4090",
+  "deskripsi" : "baru",
+  "harga" : 900000,
+  "stok" : 19,
+  "warna" : "Abu",
+  "categori" : "Elektronik"
+}
+
+
+###
+
+# Get Product by ID
+GET http://localhost:3000/api/products/15
+Content-Type: application/json
+Accept: application/json
+Authorization: dcb1c885-fba3-41ca-9309-5c1b7b524c59
+
+###
+
+# Update Product by ID
+PUT http://localhost:3000/api/products/15
+Content-Type: application/json
+Accept: application/json
+Authorization: dcb1c885-fba3-41ca-9309-5c1b7b524c59
+
+{
+  "namaProduct": "Updated VGA RTX 4090",
+  "deskripsi": "Updated baru",
+  "harga": 2000,
+  "stok": 8,
+  "warna": "White",
+  "categori": "Elektronik"
+}
+
+###
+
+# Delete Product by ID
+DELETE http://localhost:3000/api/products/15
+Content-Type: application/json
+Accept: application/json
+Authorization: dcb1c885-fba3-41ca-9309-5c1b7b524c59
